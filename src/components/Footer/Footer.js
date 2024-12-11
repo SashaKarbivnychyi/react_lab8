@@ -1,19 +1,17 @@
 import "./footer.css";
 
 import Menu from "../Menu/Menu";
+import { useSelector } from "react-redux";
 
 function Footer(props) {
+  const menuItems = useSelector(state => state.menu);
   return (
     <footer>
       <div className="column">
         <h3>{props.name}</h3>
         <Menu
         view={"horizontal"}
-        list={[
-          { text: "Telegram", url: "http://telegram.org" },
-          { text: "Twitter", url: "http://twitter.com" },
-          { text: "Instagram" }
-        ]}
+        list={menuItems}
       />
       </div>
     </footer>
