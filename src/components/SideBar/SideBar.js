@@ -1,12 +1,20 @@
 import "./sidebar.css";
 
+import Menu from "../Menu/Menu";
+
 function SideBar(props) {
   return (
     <aside>
       <h3>{props.name}</h3>
-      <a href={"https://telegram.org"}>telegram</a>
-      <a href={"https://twitter.com"}>twitter</a>
-      <a href={"https://instagram.com"}>instagram</a>
+      <Menu
+        view={"vertical"}
+        list={[
+          { text: "Telegram", url: "http://telegram.org" },
+          { text: "Twitter", url: "http://twitter.com" },
+          { text: "Instagram" }
+        ]}
+
+      />
     </aside>
   );
 }
