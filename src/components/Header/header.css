@@ -17,6 +17,7 @@ header {
     display: flex;
     flex-direction: row;
     align-self: center;
+    align-items: center;
     gap: 15px;
     list-style-type: none;
   }
