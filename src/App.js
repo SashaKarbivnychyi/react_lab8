@@ -1,12 +1,13 @@
 import './App.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Helpers from './helpers';
 
 import Content from './components/Content/Content';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import SideBar from './components/SideBar/SideBar';
+import People from './components/People/People';
 
 function App() {
   const [cache, _setCache] = useState(new Helpers());
@@ -45,6 +46,7 @@ function App() {
           readOnly
         ></textarea>
       </div>
+      <People />
       </Content>
       <Footer name="Footer"></Footer>
     </div>
